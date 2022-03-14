@@ -49,6 +49,6 @@ document.getElementById(`ekle`).onclick = function keklik(){
     var inp_value = document.getElementById("veri").value;
     col11_div.innerHTML = inp_value
 
-    
+    document.getElementById("veri").value = "";
 
 }
