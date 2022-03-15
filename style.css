@@ -9,6 +9,7 @@
     flex-direction: column;
     flex-wrap: wrap;    
     min-height: 600px;
+    opacity: 0.9;
 }
 .n-head{
     margin: 15px 5px 10px 10px;
