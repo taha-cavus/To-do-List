@@ -1,4 +1,5 @@
-
+var name = "A";
+var sayac = 0;
 
 
 
@@ -8,7 +9,10 @@ document.getElementById(`ekle`).onclick = function keklik(){
     let uList = document.querySelector("ul#u-list");
     let newNote = document.createElement(`li`)
 
-    // newNote.innerHTML = "yeni noteee"
+    // newNote silmek için id ekle
+    sayac++;
+    var id = name + sayac;
+    newNote.setAttribute(`id`,`${id}`);
 
     //listenin üstüne eleman ekle
     uList.prepend(newNote);
@@ -27,7 +31,7 @@ document.getElementById(`ekle`).onclick = function keklik(){
 
          //div-col-1 üretimi
          let col1_div = document.createElement(`div`)
-         col1_div.classList.add("col-1","li-btn","p-0")
+         col1_div.classList.add("li-btn","col-1","p-0")
          row_div.prepend(col1_div)
      
          //div-col-1'in içine button ve icon eklemek
@@ -38,9 +42,15 @@ document.getElementById(`ekle`).onclick = function keklik(){
          col1_i.classList.add("fa-solid","fa-x")
          col1_btn.prepend(col1_i)       
 
+         //delete-btn
+         col1_btn.onclick = function(){
+             newNote.remove();
+        }
+
+
     //div-col-11 üretimi
     let col11_div = document.createElement(`div`)
-    col11_div.classList.add("col-11","li-text")
+    col11_div.classList.add("li-text","col-11")
     row_div.prepend(col11_div)
 
 
@@ -50,5 +60,5 @@ document.getElementById(`ekle`).onclick = function keklik(){
     col11_div.innerHTML = inp_value
 
     document.getElementById("veri").value = "";
-
 }
+
