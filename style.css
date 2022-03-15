@@ -15,7 +15,7 @@ body{
     flex-direction: column;
     flex-wrap: wrap;    
     min-height: 700px;
-    border: 3px solid white;
+    border: 13px double gray;
 }
 .n-head{
     margin: 15px 5px 10px 10px;
@@ -62,4 +62,7 @@ body{
     display: flex;
     align-items: center;
     border-left: 2px solid black;
+}
+.li-text{
+    padding-top: 10px;
 }
